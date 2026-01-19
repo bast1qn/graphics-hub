@@ -643,3 +643,48 @@ body {
 .c-gold { color: #fbbf24; }
 .bg-gold { background: radial-gradient(circle at center, #78350f 0%, #000 100%); }
 .glow-gold { background: #f59e0b; box-shadow: 0 0 100px #f59e0b; }
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-3px, 3px); }
+  40% { transform: translate(-3px, -3px); }
+  60% { transform: translate(3px, 3px); }
+  80% { transform: translate(3px, -3px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes glitch2 {
+  0% { transform: translate(0); opacity: 0.7; }
+  25% { transform: translate(2px, -2px); opacity: 0.8; }
+  50% { transform: translate(-2px, 2px); opacity: 0.6; }
+  75% { transform: translate(2px, 2px); opacity: 0.9; }
+  100% { transform: translate(0); opacity: 0.7; }
+}
+
+@keyframes glitch3 {
+  0% { transform: translate(0); opacity: 0.5; }
+  33% { transform: translate(-4px, 2px); opacity: 0.6; }
+  66% { transform: translate(4px, -2px); opacity: 0.4; }
+  100% { transform: translate(0); opacity: 0.5; }
+}
+
+@keyframes horrorPulse {
+  0%, 100% { transform: scale(1); text-shadow: 0 0 60px #7f1d1d, 0 0 120px #450a0a; }
+  50% { transform: scale(1.02); text-shadow: 0 0 80px #dc2626, 0 0 160px #7f1d1d; }
+}
+
+@keyframes holoRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
