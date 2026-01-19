@@ -20,36 +20,34 @@ export default function AssetCard({ asset }: AssetCardProps) {
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className="group relative aspect-square overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-zinc-700"
+        className="group relative aspect-square overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-zinc-700 flex items-center justify-center"
       >
         {/* Asset Preview */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          {isCssAvatar ? (
-            <div className="w-full h-full flex items-center justify-center overflow-hidden">
-              <AvatarPreview asset={asset} />
-            </div>
-          ) : (
-            <>
-              {asset.filename.endsWith('.svg') ? (
-                <img
-                  src={`/assets/${asset.type}/${asset.filename}`}
-                  alt={asset.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              ) : (
-                <Image
-                  src={`/assets/${asset.type}/${asset.filename}`}
-                  alt={asset.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              )}
-            </>
-          )}
-        </div>
+        {isCssAvatar ? (
+          <div className="avatar-wrapper">
+            <AvatarPreview asset={asset} />
+          </div>
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            {asset.filename.endsWith('.svg') ? (
+              <img
+                src={`/assets/${asset.type}/${asset.filename}`}
+                alt={asset.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            ) : (
+              <Image
+                src={`/assets/${asset.type}/${asset.filename}`}
+                alt={asset.title}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            )}
+          </div>
+        )}
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
 
         {/* Info */}
         <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
@@ -61,7 +59,7 @@ export default function AssetCard({ asset }: AssetCardProps) {
 
         {/* Tags */}
         {asset.tags && asset.tags.length > 0 && (
-          <div className="absolute top-3 right-3 flex flex-wrap gap-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="absolute top-3 right-3 flex flex-wrap gap-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
             {asset.tags.slice(0, 2).map((tag) => (
               <span
                 key={tag}
@@ -78,7 +76,7 @@ export default function AssetCard({ asset }: AssetCardProps) {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className="bg-black">
         <div className="relative w-full h-full min-h-[500px] flex items-center justify-center bg-black">
           {isCssAvatar ? (
-            <div className="flex items-center justify-center w-full">
+            <div className="flex items-center justify-center p-8">
               <AvatarPreview asset={asset} fullSize />
             </div>
           ) : (
