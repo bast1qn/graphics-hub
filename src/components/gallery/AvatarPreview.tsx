@@ -14,7 +14,7 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
           <>
             <div className="noise"></div>
             <div className="orb-glow glow-indigo"></div>
-            <div className="glass-pane"><div className="orb-text">B</div></div>
+            <div className="glass-pane"><div className="orb-text">b</div></div>
           </>
         );
       case 'orb-rose':
@@ -22,20 +22,20 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
           <>
             <div className="noise"></div>
             <div className="orb-glow glow-rose"></div>
-            <div className="glass-pane"><div className="orb-text">B</div></div>
+            <div className="glass-pane"><div className="orb-text">b</div></div>
           </>
         );
       case 'grad-purple':
-        return <div className="grad-text">B</div>;
+        return <div className="grad-text">b</div>;
       case 'grad-dark':
-        return <div className="grad-text">B</div>;
+        return <div className="grad-text">b</div>;
       case 'sig-cursive':
-        return <div className="sig-circle"><div className="sig-text">Bast1qn</div></div>;
+        return <div className="sig-circle"><div className="sig-text">bast1qn</div></div>;
       case 'badge-crest':
         return (
           <>
             <div className="badge-border">
-              <div className="badge-main">BAST1QN</div>
+              <div className="badge-main">bast1qn</div>
               <div className="badge-sub">EST. 2026</div>
             </div>
           </>
@@ -43,15 +43,15 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
 
       // TECH & CYBER
       case 'neon-cyan':
-        return <div className="neon-ring"><div className="neon-text">BAST1QN</div></div>;
+        return <div className="neon-ring"><div className="neon-text">bast1qn</div></div>;
       case 'tech-box':
         return (
-          <div className="tech-box" style={{ borderColor: '#818cf8' }}>
+          <div className="tech-box" style={{ borderColor: '#818cf8', boxShadow: '0 20px 50px rgba(129, 140, 248, 0.3)' }}>
             <div className="tech-b" style={{ color: '#818cf8' }}>bast1qn</div>
           </div>
         );
       case 'glitch':
-        return <div className="glitch-text" data-text="BAST1QN">BAST1QN</div>;
+        return <div className="glitch-text" data-text="bast1qn">bast1qn</div>;
       case 'matrix':
         return (
           <>
@@ -73,7 +73,11 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
         return (
           <>
             <div className="lux-border" style={{ borderColor: '#f59e0b' }}></div>
-            <div className="lux-text" style={{ background: 'linear-gradient(to bottom, #fcd34d 20%, #b45309 50%, #fcd34d 80%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>BAST1QN</div>
+            <div className="lux-text" style={{
+              background: 'linear-gradient(to bottom, #fcd34d 20%, #d97706 50%, #fcd34d 80%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent'
+            }}>bast1qn</div>
           </>
         );
       case 'chrome':
@@ -100,7 +104,7 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
 
       // ART & ABSTRACT
       case 'pop-art':
-        return <div className="pop-burst"><div className="pop-text">BAST1QN</div></div>;
+        return <div className="pop-burst"><div className="pop-text">bast1qn</div></div>;
       case 'holo':
         return <div className="holo-circle"><div className="holo-text">bast1qn</div></div>;
       case 'sticker':
@@ -117,9 +121,9 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
 
       // NEW STYLES
       case 'wood':
-        return <div className="wood-board"><div className="wood-text">Bast1qn</div></div>;
+        return <div className="wood-board"><div className="wood-text">bast1qn</div></div>;
       case 'leather':
-        return <div className="leather-patch"><div className="leather-text">BAST1QN</div></div>;
+        return <div className="leather-patch"><div className="leather-text">bast1qn</div></div>;
       case 'cloud':
         return (
           <>
@@ -131,7 +135,7 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
       case 'graffiti':
         return (
           <div className="graf-text">
-            BAST1QN<div className="graf-drip" style={{ left: '40px' }}></div>
+            bast1qn<div className="graf-drip" style={{ left: '40px' }}></div>
             <div className="graf-drip" style={{ right: '80px', height: '90px' }}></div>
           </div>
         );
@@ -143,34 +147,34 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
               <div className="mosaic-tile"></div>
               <div className="mosaic-tile"></div>
             </div>
-            <div className="mosaic-text">BAST1QN</div>
+            <div className="mosaic-text">bast1qn</div>
           </>
         );
       case 'smoke':
         return (
           <>
             <div className="smoke-plume"></div>
-            <div className="smoke-text">BAST1QN</div>
+            <div className="smoke-text">bast1qn</div>
           </>
         );
       case 'vaporwave':
         return (
           <>
             <div className="vapor-sun"></div>
-            <div className="vapor-text">BAST1QN</div>
+            <div className="vapor-text">bast1qn</div>
           </>
         );
       case 'rpg':
         return (
           <div className="rpg-box">
-            <div className="rpg-text">NAME: BAST1QN<span className="rpg-cursor"></span></div>
+            <div className="rpg-text">NAME: bast1qn<span className="rpg-cursor"></span></div>
           </div>
         );
       case 'horror':
         return (
           <>
             <div className="horror-scratch"></div>
-            <div className="horror-text">BAST1QN</div>
+            <div className="horror-text">bast1qn</div>
           </>
         );
       case 'origami':
@@ -189,25 +193,16 @@ export default function AvatarPreview({ asset, fullSize = false }: AvatarPreview
   // Build style classes for avatar-content
   const getAvatarClasses = () => {
     const baseClasses = 'avatar-content';
-
-    // Add style class and custom backgrounds for specific avatars
-    switch (asset.id) {
-      case 'grad-purple':
-        return `${baseClasses} ${asset.styleClass}`.trim();
-      case 'grad-dark':
-        return `${baseClasses} ${asset.styleClass}`.trim();
-      default:
-        return `${baseClasses} ${asset.styleClass}`.trim();
-    }
+    return `${baseClasses} ${asset.styleClass}`.trim();
   };
 
   // Apply custom inline styles for specific avatars
   const getCustomStyle = () => {
     switch (asset.id) {
       case 'grad-purple':
-        return { background: 'linear-gradient(135deg, #4f46e5, #a855f7)' };
+        return { background: 'linear-gradient(135deg, #8b5cf6, #ec4899)' };
       case 'grad-dark':
-        return { background: 'linear-gradient(135deg, #0f172a, #334155)' };
+        return { background: 'linear-gradient(135deg, #1e293b, #475569)' };
       default:
         return {};
     }
