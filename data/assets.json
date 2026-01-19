@@ -1,0 +1,357 @@
+{
+  "categories": [
+    {
+      "id": "minimal",
+      "name": "Minimalist & Clean",
+      "description": "Glass, Gradients, Signatures",
+      "icon": "✨",
+      "assetTypes": ["avatars"]
+    },
+    {
+      "id": "tech",
+      "name": "Tech & Cyber",
+      "description": "Neon, Glitch, Code, Matrix",
+      "icon": "💻",
+      "assetTypes": ["avatars"]
+    },
+    {
+      "id": "elements",
+      "name": "Elements & Materials",
+      "description": "Luxury, Chrome, Fire, Ice",
+      "icon": "🔥",
+      "assetTypes": ["avatars"]
+    },
+    {
+      "id": "art",
+      "name": "Art & Abstract",
+      "description": "Pop Art, Sticker, Fluid, Holo",
+      "icon": "🎨",
+      "assetTypes": ["avatars"]
+    },
+    {
+      "id": "new",
+      "name": "New Arrivals",
+      "description": "Wood, Graffiti, Vaporwave...",
+      "icon": "🌟",
+      "assetTypes": ["avatars"]
+    }
+  ],
+  "assetTypes": [
+    {
+      "id": "avatars",
+      "name": "Avatare",
+      "description": "Profilbilder in verschiedenen Stilen",
+      "icon": "👤"
+    },
+    {
+      "id": "banners",
+      "name": "Banner",
+      "description": "Header-Banner und Cover-Bilder",
+      "icon": "🖼️"
+    },
+    {
+      "id": "thumbnails",
+      "name": "Thumbnails",
+      "description": "Vorschaubilder für Videos und Beiträge",
+      "icon": "🎬"
+    },
+    {
+      "id": "logos",
+      "name": "Logos",
+      "description": "Branding-Logos und Icons",
+      "icon": "🏷️"
+    }
+  ],
+  "assets": [
+    {
+      "id": "orb-indigo",
+      "type": "avatars",
+      "category": "minimal",
+      "title": "Orb Indigo",
+      "description": "Glassmorphism Orb with indigo glow",
+      "filename": "avatar-orb-indigo.svg",
+      "styleClass": "style-orb bg-indigo",
+      "tags": ["glass", "orb", "indigo", "minimal"]
+    },
+    {
+      "id": "orb-rose",
+      "type": "avatars",
+      "category": "minimal",
+      "title": "Orb Rose",
+      "description": "Glassmorphism Orb with rose glow",
+      "filename": "avatar-orb-rose.svg",
+      "styleClass": "style-orb bg-rose",
+      "tags": ["glass", "orb", "rose", "minimal"]
+    },
+    {
+      "id": "grad-purple",
+      "type": "avatars",
+      "category": "minimal",
+      "title": "Gradient Purple",
+      "description": "Bold gradient with purple tones",
+      "filename": "avatar-grad-purple.svg",
+      "styleClass": "style-grad",
+      "tags": ["gradient", "purple", "minimal"]
+    },
+    {
+      "id": "grad-dark",
+      "type": "avatars",
+      "category": "minimal",
+      "title": "Gradient Dark",
+      "description": "Dark gradient with slate tones",
+      "filename": "avatar-grad-dark.svg",
+      "styleClass": "style-grad",
+      "tags": ["gradient", "dark", "minimal"]
+    },
+    {
+      "id": "sig-cursive",
+      "type": "avatars",
+      "category": "minimal",
+      "title": "Signature Cursive",
+      "description": "Elegant cursive signature style",
+      "filename": "avatar-sig-cursive.svg",
+      "styleClass": "style-sig",
+      "tags": ["signature", "cursive", "elegant"]
+    },
+    {
+      "id": "badge-crest",
+      "type": "avatars",
+      "category": "minimal",
+      "title": "Badge Crest",
+      "description": "Classic badge/crest design",
+      "filename": "avatar-badge-crest.svg",
+      "styleClass": "style-badge",
+      "tags": ["badge", "crest", "classic"]
+    },
+    {
+      "id": "neon-cyan",
+      "type": "avatars",
+      "category": "tech",
+      "title": "Neon Cyan",
+      "description": "Neon ring with cyan glow",
+      "filename": "avatar-neon-cyan.svg",
+      "styleClass": "style-neon c-cyan",
+      "tags": ["neon", "cyan", "tech"]
+    },
+    {
+      "id": "tech-box",
+      "type": "avatars",
+      "category": "tech",
+      "title": "Tech Box",
+      "description": "Tech-styled bordered box",
+      "filename": "avatar-tech-box.svg",
+      "styleClass": "style-tech",
+      "tags": ["tech", "box", "border"]
+    },
+    {
+      "id": "glitch",
+      "type": "avatars",
+      "category": "tech",
+      "title": "Glitch",
+      "description": "Glitch effect with text distortion",
+      "filename": "avatar-glitch.svg",
+      "styleClass": "style-glitch",
+      "tags": ["glitch", "distortion", "tech"]
+    },
+    {
+      "id": "matrix",
+      "type": "avatars",
+      "category": "tech",
+      "title": "Matrix",
+      "description": "Matrix-style falling code",
+      "filename": "avatar-matrix.svg",
+      "styleClass": "style-matrix",
+      "tags": ["matrix", "code", "green"]
+    },
+    {
+      "id": "pcb",
+      "type": "avatars",
+      "category": "tech",
+      "title": "PCB Circuit",
+      "description": "Printed circuit board design",
+      "filename": "avatar-pcb.svg",
+      "styleClass": "style-pcb",
+      "tags": ["pcb", "circuit", "tech"]
+    },
+    {
+      "id": "lux-gold",
+      "type": "avatars",
+      "category": "elements",
+      "title": "Luxury Gold",
+      "description": "Luxurious gold gradient design",
+      "filename": "avatar-lux-gold.svg",
+      "styleClass": "style-lux c-gold",
+      "tags": ["luxury", "gold", "premium"]
+    },
+    {
+      "id": "chrome",
+      "type": "avatars",
+      "category": "elements",
+      "title": "Chrome",
+      "description": "Chrome metal effect",
+      "filename": "avatar-chrome.svg",
+      "styleClass": "style-chrome",
+      "tags": ["chrome", "metal", "shiny"]
+    },
+    {
+      "id": "magma",
+      "type": "avatars",
+      "category": "elements",
+      "title": "Magma",
+      "description": "Fire and magma effect",
+      "filename": "avatar-magma.svg",
+      "styleClass": "style-magma",
+      "tags": ["fire", "magma", "hot"]
+    },
+    {
+      "id": "ice",
+      "type": "avatars",
+      "category": "elements",
+      "title": "Ice",
+      "description": "Ice crystal effect",
+      "filename": "avatar-ice.svg",
+      "styleClass": "style-ice",
+      "tags": ["ice", "crystal", "cold"]
+    },
+    {
+      "id": "pop-art",
+      "type": "avatars",
+      "category": "art",
+      "title": "Pop Art",
+      "description": "Comic pop art style",
+      "filename": "avatar-pop-art.svg",
+      "styleClass": "style-pop",
+      "tags": ["pop", "art", "comic"]
+    },
+    {
+      "id": "holo",
+      "type": "avatars",
+      "category": "art",
+      "title": "Holographic",
+      "description": "Rainbow holographic effect",
+      "filename": "avatar-holo.svg",
+      "styleClass": "style-holo",
+      "tags": ["holo", "rainbow", "iridescent"]
+    },
+    {
+      "id": "sticker",
+      "type": "avatars",
+      "category": "art",
+      "title": "Sticker",
+      "description": "Sticker-style design",
+      "filename": "avatar-sticker.svg",
+      "styleClass": "style-sticker",
+      "tags": ["sticker", "peel", "fun"]
+    },
+    {
+      "id": "fluid",
+      "type": "avatars",
+      "category": "art",
+      "title": "Fluid",
+      "description": "Fluid blob blending",
+      "filename": "avatar-fluid.svg",
+      "styleClass": "style-fluid",
+      "tags": ["fluid", "blob", "blend"]
+    },
+    {
+      "id": "wood",
+      "type": "avatars",
+      "category": "new",
+      "title": "Woodwork",
+      "description": "Wood texture and grain",
+      "filename": "avatar-wood.svg",
+      "styleClass": "style-wood",
+      "tags": ["wood", "texture", "natural"]
+    },
+    {
+      "id": "leather",
+      "type": "avatars",
+      "category": "new",
+      "title": "Leather",
+      "description": "Leather patch design",
+      "filename": "avatar-leather.svg",
+      "styleClass": "style-leather",
+      "tags": ["leather", "patch", "rugged"]
+    },
+    {
+      "id": "cloud",
+      "type": "avatars",
+      "category": "new",
+      "title": "Cloud Sky",
+      "description": "Fluffy cloud background",
+      "filename": "avatar-cloud.svg",
+      "styleClass": "style-cloud",
+      "tags": ["cloud", "sky", "soft"]
+    },
+    {
+      "id": "graffiti",
+      "type": "avatars",
+      "category": "new",
+      "title": "Graffiti",
+      "description": "Street graffiti style",
+      "filename": "avatar-graffiti.svg",
+      "styleClass": "style-wall",
+      "tags": ["graffiti", "street", "urban"]
+    },
+    {
+      "id": "mosaic",
+      "type": "avatars",
+      "category": "new",
+      "title": "Mosaic",
+      "description": "Tile mosaic pattern",
+      "filename": "avatar-mosaic.svg",
+      "styleClass": "style-mosaic",
+      "tags": ["mosaic", "tile", "pattern"]
+    },
+    {
+      "id": "smoke",
+      "type": "avatars",
+      "category": "new",
+      "title": "Smoke",
+      "description": "Smoke plume effect",
+      "filename": "avatar-smoke.svg",
+      "styleClass": "style-smoke",
+      "tags": ["smoke", "mist", "ethereal"]
+    },
+    {
+      "id": "vaporwave",
+      "type": "avatars",
+      "category": "new",
+      "title": "Vaporwave",
+      "description": "Retro vaporwave aesthetic",
+      "filename": "avatar-vaporwave.svg",
+      "styleClass": "style-vapor",
+      "tags": ["vaporwave", "retro", "aesthetic"]
+    },
+    {
+      "id": "rpg",
+      "type": "avatars",
+      "category": "new",
+      "title": "8-Bit RPG",
+      "description": "Retro RPG game style",
+      "filename": "avatar-rpg.svg",
+      "styleClass": "style-rpg",
+      "tags": ["rpg", "pixel", "retro"]
+    },
+    {
+      "id": "horror",
+      "type": "avatars",
+      "category": "new",
+      "title": "Horror",
+      "description": "Spooky horror theme",
+      "filename": "avatar-horror.svg",
+      "styleClass": "style-horror",
+      "tags": ["horror", "spooky", "dark"]
+    },
+    {
+      "id": "origami",
+      "type": "avatars",
+      "category": "new",
+      "title": "Origami",
+      "description": "Paper origami fold",
+      "filename": "avatar-origami.svg",
+      "styleClass": "style-origami",
+      "tags": ["origami", "paper", "fold"]
+    }
+  ]
+}
