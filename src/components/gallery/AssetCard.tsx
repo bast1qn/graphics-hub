@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Asset } from '@/types/assets';
 import Modal from '@/components/ui/Modal';
+import AvatarPreview from './AvatarPreview';
 
 interface AssetCardProps {
   asset: Asset;
@@ -11,6 +12,9 @@ interface AssetCardProps {
 
 export default function AssetCard({ asset }: AssetCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Check if this is an avatar with CSS styling
+  const isCssAvatar = asset.type === 'avatars' && asset.styleClass;
 
   return (
     <>
@@ -20,19 +24,27 @@ export default function AssetCard({ asset }: AssetCardProps) {
       >
         {/* Asset Preview */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {asset.filename.endsWith('.svg') ? (
-            <img
-              src={`/assets/${asset.type}/${asset.filename}`}
-              alt={asset.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+          {isCssAvatar ? (
+            <div className="w-full h-full flex items-center justify-center overflow-hidden">
+              <AvatarPreview asset={asset} />
+            </div>
           ) : (
-            <Image
-              src={`/assets/${asset.type}/${asset.filename}`}
-              alt={asset.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+            <>
+              {asset.filename.endsWith('.svg') ? (
+                <img
+                  src={`/assets/${asset.type}/${asset.filename}`}
+                  alt={asset.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              ) : (
+                <Image
+                  src={`/assets/${asset.type}/${asset.filename}`}
+                  alt={asset.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              )}
+            </>
           )}
         </div>
 
@@ -64,21 +76,29 @@ export default function AssetCard({ asset }: AssetCardProps) {
 
       {/* Modal for full preview */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className="bg-black">
-        <div className="relative w-full h-full min-h-[500px] flex items-center justify-center">
-          {asset.filename.endsWith('.svg') ? (
-            <img
-              src={`/assets/${asset.type}/${asset.filename}`}
-              alt={asset.title}
-              className="max-w-full max-h-[70vh] object-contain"
-            />
+        <div className="relative w-full h-full min-h-[500px] flex items-center justify-center bg-black">
+          {isCssAvatar ? (
+            <div className="flex items-center justify-center w-full">
+              <AvatarPreview asset={asset} fullSize />
+            </div>
           ) : (
-            <Image
-              src={`/assets/${asset.type}/${asset.filename}`}
-              alt={asset.title}
-              width={asset.previewSize?.width || 800}
-              height={asset.previewSize?.height || 800}
-              className="max-w-full max-h-[70vh] object-contain"
-            />
+            <>
+              {asset.filename.endsWith('.svg') ? (
+                <img
+                  src={`/assets/${asset.type}/${asset.filename}`}
+                  alt={asset.title}
+                  className="max-w-full max-h-[70vh] object-contain"
+                />
+              ) : (
+                <Image
+                  src={`/assets/${asset.type}/${asset.filename}`}
+                  alt={asset.title}
+                  width={asset.previewSize?.width || 800}
+                  height={asset.previewSize?.height || 800}
+                  className="max-w-full max-h-[70vh] object-contain"
+                />
+              )}
+            </>
           )}
           <div className="absolute bottom-0 left-0 right-0 p-6 text-center bg-gradient-to-t from-black to-transparent">
             <h2 className="text-2xl font-bold text-white mb-2">{asset.title}</h2>
