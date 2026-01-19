@@ -35,21 +35,21 @@ const isTypeInfo = (item: any): item is AssetTypeInfo => {
 // Load data from JSON
 export const loadAssets = (): Asset[] => {
   if ('assets' in assetsData && Array.isArray(assetsData.assets)) {
-    return assetsData.assets.filter(isAsset);
+    return assetsData.assets.filter(isAsset) as Asset[];
   }
   return [];
 };
 
 export const loadCategories = (): AssetCategoryInfo[] => {
   if ('categories' in assetsData && Array.isArray(assetsData.categories)) {
-    return assetsData.categories.filter(isCategoryInfo);
+    return assetsData.categories.filter(isCategoryInfo) as AssetCategoryInfo[];
   }
   return [];
 };
 
 export const loadAssetTypes = (): AssetTypeInfo[] => {
   if ('assetTypes' in assetsData && Array.isArray(assetsData.assetTypes)) {
-    return assetsData.assetTypes.filter(isTypeInfo);
+    return assetsData.assetTypes.filter(isTypeInfo) as AssetTypeInfo[];
   }
   return [];
 };
