@@ -20,7 +20,7 @@ export default function AssetCard({ asset }: AssetCardProps) {
     <>
       <div
         onClick={() => setIsModalOpen(true)}
-        className="group relative aspect-square overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-zinc-700 flex items-center justify-center"
+        className="group relative aspect-square w-[280px] h-[280px] overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/50 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-zinc-700"
       >
         {/* Asset Preview */}
         {isCssAvatar ? (
@@ -74,9 +74,9 @@ export default function AssetCard({ asset }: AssetCardProps) {
 
       {/* Modal for full preview */}
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} className="bg-black">
-        <div className="relative w-full h-full min-h-[500px] flex items-center justify-center bg-black">
+        <div className="relative w-full h-full min-h-[500px] flex items-center justify-center bg-black p-8">
           {isCssAvatar ? (
-            <div className="flex items-center justify-center p-8">
+            <div className="flex items-center justify-center" style={{ width: '800px', height: '800px' }}>
               <AvatarPreview asset={asset} fullSize />
             </div>
           ) : (
